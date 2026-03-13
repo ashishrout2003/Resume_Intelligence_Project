@@ -1,14 +1,16 @@
-import React from 'react'
-import { RouterProvider } from 'react-router'
-import {router} from "./App.routes.jsx"
-import { AuthProvider } from './Feature/Auth/Auth.context.jsx'
-
+import React from "react";
+import { RouterProvider } from "react-router";
+import { router } from "./App.routes.jsx";
+import { AuthProvider } from "./Feature/Auth/Auth.context.jsx";
+import { InterviewProvider } from "./Feature/Interview/interview.context.jsx";
 const App = () => {
   return (
     <AuthProvider>
-    <RouterProvider router={router} />
+      <InterviewProvider>
+        <RouterProvider router={router} />
+      </InterviewProvider>
     </AuthProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
