@@ -13,7 +13,7 @@ if(!context){
         setLoading(true)
             let response = null
         try{
-             response = await generateInterviewReport({jobDescription, selfDescription, resumeFile})
+            response = await generateInterviewReport({jobDescription, selfDescription, resumeFile})
             setReport(response.interviewReport)
 
         }catch(err){
@@ -30,7 +30,7 @@ if(!context){
         setLoading(true)
         let response = null
         try{
-             response = await getInterviewReportById({interviewId})
+            response = await getInterviewReportById({interviewId})
             setReport(response.interviewReport)
 
         }catch(err){
@@ -46,7 +46,7 @@ if(!context){
         setLoading(true)
         let response = null
         try{
-             response = await getAllInterviewReports({jobDescription, selfDescription, resumeFile})
+            response = await getAllInterviewReports({jobDescription, selfDescription, resumeFile})
             setReport(response.interviewReports)
 
         }catch(err){
