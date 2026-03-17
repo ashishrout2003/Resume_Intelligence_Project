@@ -16,8 +16,8 @@ if(!context){
             response = await generateInterviewReport({jobDescription, selfDescription, resumeFile})
             setReport(response.interviewReport)
 
-        }catch(err){
-            console.log(err);
+        }catch(error){
+            console.log(error);
             
         }finally{
             setLoading(false)
@@ -33,8 +33,8 @@ if(!context){
             response = await getInterviewReportById({interviewId})
             setReport(response.interviewReport)
 
-        }catch(err){
-            console.log(err);
+        }catch(error){
+            console.log(error);
             
         }finally{
             setLoading(false)
@@ -49,8 +49,8 @@ if(!context){
             response = await getAllInterviewReports({jobDescription, selfDescription, resumeFile})
             setReport(response.interviewReports)
 
-        }catch(err){
-            console.log(err);
+        }catch(error){
+            console.log(error);
             
         }finally{
             setLoading(false)
