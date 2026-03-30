@@ -46,8 +46,8 @@ if(!context){
         setLoading(true)
         let response = null
         try{
-            response = await getAllInterviewReports({jobDescription, selfDescription, resumeFile})
-            setReport(response.interviewReports)
+            response = await getAllInterviewReports()
+            setReports(response.interviewReports)
 
         }catch(error){
             console.log(error);
